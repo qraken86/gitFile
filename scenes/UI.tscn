@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dbc5l13q051lu"]
+
+[ext_resource type="Script" uid="uid://2rr4fli4wxpj" path="res://scripts/ui.gd" id="1_ro3t7"]
+[ext_resource type="FontFile" uid="uid://je7mnheriy4t" path="res://scenes/Ldfcomicsanshairline-5PmL.ttf" id="2_5en4g"]
+
+[node name="main menu" type="Control" unique_id=1928372922]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ro3t7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1453620596]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 644.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2098767700]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 645.0
+color = Color(0.6559524, 0.7215089, 0.87710214, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=432362127]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 274.0
+offset_right = 822.0
+offset_bottom = 340.0
+rotation = 0.00015890598
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=2060915349]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5en4g")
+theme_override_font_sizes/font_size = 28
+text = "again..."
+
+[node name="play" type="Button" parent="VBoxContainer" unique_id=161664422]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5en4g")
+theme_override_font_sizes/font_size = 42
+text = "play"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=29970034]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_fonts/font = ExtResource("2_5en4g")
+theme_override_font_sizes/font_size = 42
+text = "quit
+"
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
